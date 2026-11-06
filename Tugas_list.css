@@ -1,0 +1,76 @@
+body{
+    background-color:lightblue
+}
+
+h4{
+    background-color:cornsilk;
+    color:black;
+    text-align:left;
+    padding:5px;
+}
+
+.buah{
+    background-color:#f94449;
+    padding: 10px;
+}
+
+.buah li{
+    background-color: #ee6b6e;
+    padding: 5px;
+    margin: 3px;
+}
+
+.buah li:hover{
+    background-color:#f69697;
+}
+
+.lorem{
+    background-color: #fcfaf6;
+    padding: 10px;
+}
+
+.lorem li{
+    background-color: #F2F0EB;
+    padding: 5px;
+    margin: 3px;
+}
+
+.lorem li:hover{
+    background-color:#c4c9c7;
+}
+
+.icon{
+    background-color: #09389f;
+    padding: 10px;
+}
+
+.icon ul{
+    padding-left: 20px;
+    background-color: #003dc1;
+}
+
+.icon li{
+    background-color: l#0d406b;
+    padding: 5px;
+    margin: 3px;
+}
+
+.icon i{
+    font-size: 18px;
+    color: gold;
+    margin-right: 5px;
+}
+
+.icon li:hover{
+    background-color:rgb(22, 110, 219);
+}
+
+footer{
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer{
+    margin-top: 20px;
+}

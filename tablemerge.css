@@ -1,0 +1,144 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F8F5F0;
+    background-image:url(background.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    margin:0;
+    font-family:"Times New Roman",sans-serif;
+}
+
+h2{
+    background-color: cornsilk;
+    color:black;
+    padding:5px;
+    text-align:center;
+    border-radius:10px;
+}
+
+table {
+    width: 600px;
+    height: 400px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #172A4A;
+    border: 4px solid #D6A45D;
+}
+
+
+td {
+    border: 4px solid #D6A45D;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #FFF3DD;
+    padding: 5px;
+    background-color: #172A4A;
+}
+
+
+tr:nth-child(1) td:nth-child(2),
+tr:nth-child(1) td:nth-child(3),
+tr:nth-child(3) td:nth-child(2),
+tr:nth-child(3) td:nth-child(3),
+tr:nth-child(5) td:nth-child(2) {
+    background-color: #49345F;
+}
+
+
+tr:nth-child(2) td,
+tr:nth-child(6) td:nth-child(2),
+tr:nth-child(6) td:nth-child(3) {
+    background-color: #C98299;
+}
+
+
+tr:nth-child(2) td:nth-child(1),
+tr:nth-child(1) td:nth-child(8) {
+    background-color: #9680B5;
+}
+
+
+tr:nth-child(4) td,
+tr:nth-child(6) td:last-child {
+    background-color: #F8DDC5;
+    color: #172A4A;
+}
+
+td:hover {
+    background-color: #E6B8C2 !important;
+    color: #172A4A !important;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+/* TABLE NILAI SISWA */
+
+.nilai {
+    width: 700px;
+    height: auto;
+    margin: 20px auto;
+    border: 3px solid #B58B5A;
+    border-collapse: collapse;
+    background-color: #F3EBDD;
+}
+
+.nilai th {
+    background-color: #354F52;
+    color: #F8F5F0;
+    border: 2px solid #B58B5A;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.nilai td {
+    background-color: #E8E1D5;
+    color: #354F52;
+    border: 2px solid #B58B5A;
+    padding: 12px;
+    font-size: 17px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nilai tr:nth-child(even) td {
+    background-color: #D6C8B5;
+}
+
+.nilai tr:hover td {
+    background-color: #A3B18A;
+    color: #263A3A;
+    cursor: pointer;
+}
+
+.nilai td {
+    background-color: #E8E1D5 !important;
+    color: #354F52 !important;
+}
+
+.nilai tr:nth-child(even) td {
+    background-color: #D6C8B5 !important;
+}
+
+.nilai td:hover {
+    background-color: #A3B18A !important;
+    color: #263A3A !important;
+}
+
+.nilai tr:not(:first-child):hover td {
+    background-color: #A3B18A !important;
+    color: #263A3A !important;
+    transition: 0.3s;
+    cursor: pointer;
+}

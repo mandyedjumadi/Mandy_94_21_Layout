@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Craft</title>
+    <link rel="stylesheet" href="sts_94_21.css">
+</head>
+<body>
+    <div id="website-header">
+        <div class="header">
+            <h1>Layout, Table, List HTML CSS dan Hosting</h1>
+        </div>
+
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="tablemerge.html">Table</a>
+            <a href="Tugas_list.html">List</a>
+            <a href="sts_94_21.html">STS</a>
+        </div>
+    </div>
+
+<header id="title-screen">
+    <div class="title-content">
+        <div class="top-label">
+            SOCIAL MEDIA CRAFT
+        </div>
+        <h1>
+            USE SOCIAL MEDIA<br>
+            THE RIGHT WAY!
+        </h1>
+        <p class="subtitle">
+            Mandy/94/21
+        </p>
+      
+        <button class="start-button" onclick="startGame()">
+            ▶ START QUEST
+        </button>
+    </div>
+</header>
+
+<footer class="title-footer">
+    <h1>MANDY / 94 / 21</h1>
+</footer>
+
+<nav id="game-nav">
+    <button onclick="showLevel('about')">
+        📖 ABOUT
+    </button>
+    <button onclick="showLevel('benefits')">
+        💎 BENEFITS
+    </button>
+    <button onclick="showLevel('quests')">
+        ⚔ QUESTS
+    </button>
+    <button onclick="showLevel('reward')">
+        🏆 REWARD
+    </button>
+</nav>
+
+<button class="back-button" id="back-button" onclick="backToTitle()">
+    ◀ BACK
+</button>
+
+<main>
+<section id="about" class="level-screen">
+    <div class="level">
+        LEVEL 01
+    </div>
+    <h2>
+        📖 WHAT IS SOCIAL MEDIA?
+    </h2>
+    <img
+        src="gambar1.jpg"
+        alt="People using social media"
+        class="gambar"
+    >
+    <p>
+        Social media is a digital platform that allows people to communicate,
+        share information, create content, and interact with others through
+        the internet. Today, social media has become an important part of
+        everyday life, especially for teenagers. Some popular social media
+        platforms include Instagram, TikTok, YouTube, and WhatsApp. Social
+        media can be used for learning, finding information, communicating
+        with friends and family, and showing creativity. However, if it is
+        not used wisely, social media can also cause problems such as the
+        spread of fake news, cyberbullying, excessive screen time, and
+        privacy problems.
+    </p>
+
+    <p>
+        Because of this, using social media correctly is very important.
+        Before uploading or sharing something, we should think about how it
+        could affect ourselves and other people. We should also understand
+        that something posted on the internet can be difficult to completely
+        remove. Everything we post can become part of our digital footprint.
+        By using social media responsibly, we can enjoy the benefits of
+        technology without causing harm to ourselves or others.
+    </p>
+
+    <div class="inventory">
+        <div class="inventory-title">
+            PLAYER STATUS — CLICK AN ITEM
+        </div>
+        <div class="inventory-items">
+            <button
+                class="item status-item"
+                onclick="showStatus(
+                    '🛡️',
+                    'SAFETY',
+                    'Protecting yourself online means keeping personal information private, being careful with strangers, using strong passwords, and reporting harmful content. Before sharing anything, think about whether it could put you or someone else at risk.'
+                )"
+            >
+                <span>🛡️</span>
+                <small>SAFETY</small>
+            </button>
+
+            <button
+                class="item status-item"
+                onclick="showStatus(
+                    '🧠',
+                    'SMART',
+                    'Being a smart social media user means thinking critically. Do not automatically believe everything you see online. Check information, compare reliable sources, and think carefully before liking, commenting, or sharing a post.'
+                )"
+            >
+                <span>🧠</span>
+                <small>SMART</small>
+            </button>
+
+            <button
+                class="item status-item"
+                onclick="showStatus(
+                    '💬',
+                    'RESPECT',
+                    'Respect means treating other people politely online, even when you disagree with them. Avoid insulting, mocking, or bullying others. Remember that there is a real person behind every account.'
+                )"
+            >
+                <span>💬</span>
+                <small>RESPECT</small>
+            </button>
+
+            <button
+                class="item status-item"
+                onclick="showStatus(
+                    '🔍',
+                    'CHECK',
+                    'Always check information before sharing it. Look at who created the information, when it was published, and whether other trustworthy sources report the same thing. This helps prevent fake news from spreading.'
+                )"
+            >
+                <span>🔍</span>
+                <small>CHECK</small>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="benefits" class="level-screen">
+    <div class="level">
+        LEVEL 02
+    </div>
+    <h2>
+        💎 UNLOCK THE BENEFITS
+    </h2>
+    <img
+        src="gambar2.jpg"
+        alt="Teenagers using social media"
+        class="gambar"
+    >
+    <p>
+        Social media has many benefits when it is used properly. One of its
+        biggest benefits is making communication easier. We can communicate
+        with friends, family, or other people without being in the same
+        place. Social media can also be a useful source of information and
+        education. Many educational accounts share content about school
+        subjects, languages, technology, sports, health, and many other
+        topics. This allows people to learn in ways that can be interesting
+        and easy to access.
+    </p>
+    <p>
+        Social media can also be used to develop creativity. People can
+        create videos, designs, writing, photographs, or other types of
+        content and share them with others. Therefore, social media does not
+        only have to be used for entertainment. It can also be a place to
+        show skills, discover new interests, and express ideas. Social media
+        can also help us learn about events and information around us.
+        However, we should always choose reliable information and avoid
+        believing everything that appears on our feed.
+    </p>
+
+    <div class="crafting-table">
+        <h3>
+            ⚒️ BENEFIT QUESTS
+        </h3>
+        <p class="quest-instruction">
+            Hover over a skill to inspect it, then click to complete the quest!
+        </p>
+        <div class="craft-grid">
+            <button
+                class="craft-card benefit-quest"
+                data-xp="10"
+                onclick="completeBenefit(this)"
+           >
+                <div class="block-icon">
+                    📚
+                </div>
+                <h3>
+                    LEARN
+                </h3>
+                <p>
+                    Use social media to discover useful knowledge and
+                    information.
+                </p>
+                <div class="quest-description">
+                    Complete this quest by using social media to learn
+                    something useful instead of only using it for
+                    entertainment.
+                </div>
+                <span class="xp-reward">
+                    +10 XP
+                </span>
+                <span class="complete-text">
+                    CLICK TO COMPLETE
+                </span>
+            </button>
+            <button
+                class="craft-card benefit-quest"
+                data-xp="15"
+                onclick="completeBenefit(this)"
+           >
+                <div class="block-icon">
+                    💡
+                </div>
+                <h3>
+                    CREATE
+                </h3>
+                <p>
+                    Use social media to create and share positive
+                    creative work.
+                </p>
+                <div class="quest-description">
+                    Complete this quest by using technology to create
+                    something positive, such as a video, design, artwork,
+                    writing, or educational content.
+                </div>
+                <span class="xp-reward">
+                    +15 XP
+                </span>
+                <span class="complete-text">
+                    CLICK TO COMPLETE
+                </span>
+            </button>
+
+            <button
+                class="craft-card benefit-quest"
+                data-xp="10"
+                onclick="completeBenefit(this)"
+            >
+                <div class="block-icon">
+                    🤝
+                </div>
+                <h3>
+                    CONNECT
+                </h3>
+                <p>
+                    Communicate with other people politely and positively.
+                </p>
+                <div class="quest-description">
+                    Complete this quest by using social media to maintain
+                    positive communication with friends, family, or other
+                    people.
+                </div>
+                <span class="xp-reward">
+                    +10 XP
+                </span>
+                <span class="complete-text">
+                    CLICK TO COMPLETE
+                </span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="quests" class="level-screen">
+    <div class="level">
+        LEVEL 03
+    </div>
+    <h2>
+        ⚔️ DIGITAL SAFETY QUESTS
+    </h2>
+    <p>
+        There are several ways to use social media wisely. First, we should
+        check whether information is true before sharing it. Fake news can
+        spread very quickly and cause misunderstandings. We can compare
+        information from several reliable sources before believing or
+        sharing it. Second, we should protect our privacy by not sharing
+        personal information such as our home address, phone number,
+        passwords, or other important information with strangers online.
+    </p>
+    <p>
+        Third, we should use polite language when commenting or
+        communicating with other people. Having different opinions is
+        normal, but we should never insult, mock, or bully someone online.
+        We should also respect other people's photographs, ideas, and
+        creative work. If we want to use someone else's work, we should
+        give proper credit. Fourth, we should manage our screen time.
+        Spending too much time on social media can interfere with studying,
+        sleeping, exercising, and spending time with family and friends in
+        real life.
+    </p>
+    <p>
+        We should also be careful when receiving friend requests or
+        messages from people we do not know. Not every account on the
+        internet represents a person's real identity. If we find harmful
+        or inappropriate content, we can report it to the platform and ask
+        a trusted adult for help. By being careful and responsible, we can
+        make our experience on social media safer and more positive.
+    </p>
+    <div class="quest-board">
+        <h3>
+            📜 QUEST BOARD
+        </h3>
+        <p class="quest-instruction">
+            Click each quest to complete it and earn XP!
+        </p>
+        <button
+            class="quest"
+            data-xp="20"
+            onclick="completeQuest(this)"
+        >
+            <div class="quest-number">
+                I
+            </div>
+            <div class="quest-info">
+                <strong>
+                    CHECK BEFORE SHARING
+                </strong>
+                <small>
+                    Verify information before reposting.
+                </small>
+            </div>
+            <div class="quest-xp">
+                +20 XP
+            </div>
+            <div class="quest-check">
+                ✓
+            </div>
+        </button>
+        <button
+            class="quest"
+            data-xp="20"
+            onclick="completeQuest(this)"
+        >
+            <div class="quest-number">
+                II
+            </div>
+            <div class="quest-info">
+                <strong>
+                    PROTECT YOUR PRIVACY
+                </strong>
+                <small>
+                    Keep your personal information safe.
+                </small>
+            </div>
+            <div class="quest-xp">
+                +20 XP
+            </div>
+            <div class="quest-check">
+                ✓
+            </div>
+        </button>
+
+        <button
+            class="quest"
+            data-xp="20"
+            onclick="completeQuest(this)"
+        >
+            <div class="quest-number">
+                III
+            </div>
+            <div class="quest-info">
+                <strong>
+                    RESPECT OTHER PLAYERS
+                </strong>
+                <small>
+                    Think before commenting or posting.
+                </small>
+            </div>
+            <div class="quest-xp">
+                +20 XP
+            </div>
+            <div class="quest-check">
+                ✓
+            </div>
+        </button>
+        <button
+            class="quest"
+            data-xp="20"
+            onclick="completeQuest(this)"
+        >
+            <div class="quest-number">
+                IV
+            </div>
+            <div class="quest-info">
+                <strong>
+                    CONTROL SCREEN TIME
+                </strong>
+                <small>
+                    Balance digital life with real life.
+                </small>
+            </div>
+            <div class="quest-xp">
+                +20 XP
+            </div>
+            <div class="quest-check">
+                ✓
+            </div>
+        </button>
+
+        <div class="xp-container">
+            <div class="xp-text">
+                <span>
+                    XP
+                </span>
+                <span id="xp-number">
+                    0 / 100
+                </span>
+            </div>
+
+            <div class="xp-bar">
+                <div
+                    class="xp-fill"
+                    id="xp-fill"
+                ></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="reward" class="level-screen">
+    <div class="level">
+        FINAL LEVEL
+    </div>
+    <h2>
+        🏆 QUEST COMPLETE!
+    </h2>
+    <p>
+        Social media is a technology that provides many benefits in our
+        everyday lives. We can use it to communicate, learn, find
+        information, and develop creativity. However, these benefits can
+        only be enjoyed when we use social media responsibly. We should
+        think before uploading something, check information before sharing
+        it, protect our privacy, respect other people, and manage our
+        screen time.
+    </p>
+    <p>
+        As social media users, we are responsible for the things we do in
+        the digital world. Everything we upload and share can become part of
+        our digital footprint. Therefore, we should become smart, respectful,
+        and responsible digital citizens. We should use social media for
+        positive and useful purposes instead of spreading hate or
+        information that has not been proven to be true. When we use
+        technology wisely, social media can help us learn, grow,
+        communicate, and make a positive impact on the people around us.
+    </p>
+    <div class="achievement">
+        <div class="achievement-icon">
+            🏆
+        </div>
+        <div>
+            <h3>
+                ACHIEVEMENT UNLOCKED!
+            </h3>
+            <p>
+                RESPONSIBLE DIGITAL CITIZEN
+            </p>
+        </div>
+    </div>
+
+    <div class="final-stats">
+        <h3>
+            PLAYER STATISTICS
+        </h3>
+        <p>
+            QUESTS COMPLETED:
+            <strong id="completed-number">
+                0
+            </strong>
+        </p>
+        <p>
+            TOTAL XP:
+            <strong id="final-xp">
+                0
+            </strong>
+        </p>
+    </div>
+</section>
+</main>
+
+<div
+    class="popup-overlay"
+    id="status-popup"
+    onclick="closeStatus(event)"
+>
+    <div
+        class="status-popup"
+        onclick="event.stopPropagation()"
+    >
+        <button
+            class="popup-close"
+            onclick="closeStatus()"
+        >
+            ✕
+        </button>
+        <div
+            class="popup-icon"
+            id="popup-icon"
+        >
+            🛡️
+        </div>
+
+        <h2 id="popup-title">
+            SAFETY
+        </h2>
+        <p id="popup-text">
+            Explanation
+        </p>
+        <div class="popup-tip">
+            💡 TIP
+        </div>
+    </div>
+</div>
+
+<script>
+let totalXP = 0;
+let completedQuests = 0;
+const titleScreen =
+    document.getElementById("title-screen");
+const gameNav =
+    document.getElementById("game-nav");
+const backButton =
+    document.getElementById("back-button");
+const levels =
+    document.querySelectorAll(".level-screen");
+function startGame() {
+    titleScreen.classList.add("hidden");
+    gameNav.classList.add("visible");
+    backButton.classList.add("visible");
+    showLevel("about");
+}
+function showLevel(levelName) {
+    titleScreen.classList.add("hidden");
+    gameNav.classList.add("visible");
+    backButton.classList.add("visible");
+    levels.forEach(function(level) {
+        level.classList.remove("active");
+    });
+    const selectedLevel =
+        document.getElementById(levelName);
+    if (selectedLevel) {
+        selectedLevel.classList.add("active");
+    }
+}
+function backToTitle() {
+    levels.forEach(function(level) {
+        level.classList.remove("active");
+    });
+    gameNav.classList.remove("visible");
+    backButton.classList.remove("visible");
+    titleScreen.classList.remove("hidden");
+}
+function showStatus(icon, title, text) {
+    const popup =
+        document.getElementById("status-popup");
+    const iconElement =
+        document.getElementById("popup-icon");
+    const titleElement =
+        document.getElementById("popup-title");
+    const textElement =
+        document.getElementById("popup-text");
+    iconElement.innerHTML = icon;
+    titleElement.innerHTML = title;
+    textElement.innerHTML = text;
+    popup.classList.add("show");
+}
+
+function closeStatus(event) {
+    if (
+        event &&
+        event.target !== event.currentTarget
+    ) {
+        return;
+    }
+
+    document
+        .getElementById("status-popup")
+        .classList.remove("show");
+}
+
+function completeBenefit(card) {
+    if (card.classList.contains("completed")) {
+        return;
+    }
+    const xp =
+        Number(card.dataset.xp);
+    card.classList.add("completed");
+    const completeText =
+        card.querySelector(".complete-text");
+    completeText.innerHTML =
+        "✓ QUEST COMPLETED";
+    addXP(xp);
+}
+function completeQuest(quest) {
+    if (quest.classList.contains("completed")) {
+        return;
+    }
+    const xp =
+        Number(quest.dataset.xp);
+    quest.classList.add("completed");
+    const xpText =
+        quest.querySelector(".quest-xp");
+    xpText.innerHTML =
+        "✓ COMPLETED";
+    addXP(xp);
+}
+
+function addXP(amount) {
+    totalXP += amount;
+    completedQuests++;
+
+    document.getElementById("xp-number").innerHTML =
+        totalXP + " / 100";
+    document.getElementById("final-xp").innerHTML =
+        totalXP;
+    document.getElementById("completed-number").innerHTML =
+        completedQuests;
+    let percentage =
+        Math.min(totalXP, 100);
+    document.getElementById("xp-fill").style.width =
+        percentage + "%";
+    if (totalXP >= 100) {
+        document
+            .getElementById("xp-fill")
+            .classList.add("complete");
+    }
+}
+
+window.onload = function() {
+    titleScreen.classList.remove("hidden");
+    gameNav.classList.remove("visible");
+    backButton.classList.remove("visible");
+    levels.forEach(function(level) {
+        level.classList.remove("active");
+    });
+};
+</script>
+
+<script>
+window.addEventListener("scroll", function () {
+    const footer = document.querySelector(".title-footer");
+    if (!footer) return;
+
+    const stopPoint = footer.offsetTop + footer.offsetHeight / 2 - window.innerHeight / 2;
+
+    if (window.scrollY > stopPoint) {
+        window.scrollTo(0, stopPoint);
+    }
+});
+</script>
+</body>
+</html>

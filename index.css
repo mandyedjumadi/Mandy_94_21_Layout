@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-image:url(background.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    margin:0;
+    font-family:"Times New Roman",sans-serif;
+}
+
+
+.header{
+    background-color: bisque;
+    padding: 20px;
+    text-align: center;
+    height: 120px;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: burlywood;
+}
+.topnav a{
+    float: left;
+    display: block;
+    color: brown;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover{
+    background-color: peru;
+    color: white;
+}
+
+.column{
+    float: left;
+    padding: 10px;
+}
+.column.side{
+    width: 25%;
+}
+.column.middle{
+    width: 50%;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.footer{
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+}
+
+table, th, td{
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 5px;
+}
+
+tr{
+    background-color: bisque;
+}
+
+tr:nth-child(even){
+    background-color: cornsilk;
+}
+
+tr:hover{
+    background-color: honeydew;
+}
+
+div.column.side{
+    margin: 30px auto;
+    width: 25%;
+    height: 265px;
+    background-color: rgb(203,184,170);
+    color: black;
+    padding: 10px;
+}
+
+div.column.middle{
+    margin: 30px auto;
+    width: 50%;
+    height: 265px;
+    background-color: rgb(203,184,170);
+    color: black;
+    padding: 10px;
+}

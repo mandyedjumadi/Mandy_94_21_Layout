@@ -1,0 +1,424 @@
+body{
+    background-image:url(background.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    margin:0;
+    font-family:"Times New Roman",sans-serif;
+}
+
+h1.header-title{
+    background-color: bisque;
+    padding: 2px;
+    text-align: center;
+    color: black;
+    height: 120px;
+}
+
+h1{
+    background-color:navy;
+    color:cornsilk;
+    text-align:center;
+    padding:20px;
+    border-radius:10px;
+}
+h2{
+    background-color:navy;
+    color:cornsilk;
+    text-align:center;
+    padding:10px;
+    border-radius:10px;
+    margin-top:30px;
+}
+div.biodata{
+    margin:30px auto;
+    width:70%;
+    background-color:rgb(203,184,170);
+    color:black;
+    padding:30px;
+    border-radius:12px;
+}
+div.content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+}
+div.foto{
+    position:relative;
+    width:250px;
+    height:250px;
+    overflow:hidden;
+    border-radius:15px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:3px solid black;
+    flex-shrink:0;
+}
+div.foto img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    transition:transform .5s ease,opacity .5s ease;
+    padding:0;
+    border-radius:0;
+}
+.foto img.top{
+    opacity:1;
+    z-index:2;
+}
+.foto:hover img.top{
+    transform:scale(1.1);
+    opacity:0;
+}
+.foto img.bottom{
+    opacity:0;
+    z-index:1;
+}
+.foto:hover img.bottom{
+    transform:scale(1.1);
+    opacity:1;
+}
+div.isi{
+    font-size:15px;
+    line-height:1.5;
+}
+.makanan,.movies,.series{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+.food-card,.movie-card,.series-card{
+    position:relative;
+    width:210px;
+    height:250px;
+    border-radius:25px;
+    box-shadow:0 4px 8px rgba(0,0,0,.2);
+    margin-bottom:25px;
+    background-color:cornsilk;
+    overflow:hidden;
+    cursor:pointer;
+    transition:transform .3s ease,box-shadow .3s ease;
+}
+.food-card:hover,.movie-card:hover,.series-card:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 16px rgba(0,0,0,.35);
+}
+.food-card>img,.movie-card>img,.series-card>img{
+    width:210px;
+    height:170px;
+    padding:10px;
+    border-radius:25px;
+    object-fit:cover;
+}
+.food-card>p,.movie-card>p,.series-card>p{
+    text-align:center;
+    margin-top:5px;
+    font-weight:bold;
+}
+.description{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.88);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    opacity:0;
+    transition:opacity .3s ease;
+}
+.food-card:hover .description{
+    opacity:1;
+}
+.description h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+.description p{
+    font-size:14px;
+    line-height:1.5;
+}
+.intro-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    opacity:0;
+    z-index:2;
+    transition:opacity .3s ease;
+}
+.movie-card:hover .intro-video,.series-card:hover .intro-video{
+    opacity:0;
+}
+.movie-card.watching .intro-video,.series-card.watching .intro-video{
+    opacity:1;
+    z-index:6;
+}
+.media-info{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:190px;
+    box-sizing:border-box;
+    padding:18px 15px 55px;
+    background:linear-gradient(to bottom,rgba(0,0,0,.92),rgba(0,0,0,.55),rgba(0,0,0,.05));
+    color:white;
+    text-align:center;
+    opacity:0;
+    z-index:7;
+    transition:opacity .3s ease;
+}
+.movie-card:hover .media-info,.series-card:hover .media-info{
+    opacity:1;
+}
+.media-info h3{
+    margin:0 0 10px;
+    font-size:18px;
+}
+.media-info p{
+    margin:0;
+    font-size:13px;
+    line-height:1.4;
+}
+.movie-card.watching .media-info,.series-card.watching .media-info{
+    opacity:1;
+    background:linear-gradient(to bottom,rgba(0,0,0,.8),rgba(0,0,0,.05));
+    min-height:70px;
+    height:70px;
+    padding:15px;
+}
+.movie-card.watching .media-info p,.series-card.watching .media-info p{
+    display:none;
+}
+.watch-clip{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:black;
+    padding:9px 17px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+    opacity:0;
+    z-index:10;
+    transition:opacity .2s ease,transform .2s ease;
+    white-space:nowrap;
+}
+.movie-card:hover .watch-clip,.series-card:hover .watch-clip{
+    opacity:1;
+}
+.watch-clip:hover{
+    transform:translateX(-50%) scale(1.06);
+}
+.movie-card.watching .watch-clip,.series-card.watching .watch-clip{
+    opacity:1;
+    background:rgba(255,255,255,.9);
+}
+.spotify-playlist{
+    width:90%;
+    max-width:1100px;
+    margin:25px auto 50px;
+    padding:30px;
+    box-sizing:border-box;
+    border-radius:20px;
+    background:linear-gradient(to bottom,#8b0000 0%,#5c0000 20%,#181818 45%,#181818 100%);
+    color:white;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.playlist-header{
+    display:flex;
+    align-items:flex-end;
+    gap:30px;
+    padding-bottom:30px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+.playlist-cover{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+.playlist-info{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+.playlist-small{
+    font-size:13px;
+    font-weight:bold;
+    margin:0 0 10px;
+    letter-spacing:1px;
+}
+.playlist-info h1{
+    background:none;
+    color:white;
+    padding:0;
+    margin:0 0 15px;
+    text-align:left;
+    border-radius:0;
+    font-size:42px;
+}
+.playlist-owner{
+    color:white;
+    font-size:14px;
+    font-weight:bold;
+    margin:0;
+}
+.song-card{
+    width:100%;
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:10px 15px;
+    margin-top:5px;
+    background-color:transparent;
+    color:white;
+    border-radius:8px;
+    box-sizing:border-box;
+    cursor:pointer;
+    transition:background-color .2s ease,transform .2s ease;
+}
+.song-card:hover{
+    background-color:rgba(255,255,255,.12);
+    transform:scale(1.01);
+}
+.song-card.playing{
+    background-color:rgba(255,255,255,.08);
+}
+.song-number{
+    width:25px;
+    color:#b3b3b3;
+    font-size:14px;
+    text-align:center;
+}
+.song-card.playing .song-number{
+    color:white;
+}
+.song-card img{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:4px;
+    flex-shrink:0;
+}
+.song-info{
+    flex:1;
+    min-width:0;
+}
+.song-info h3{
+    margin:0 0 5px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    text-align:left;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.song-info p{
+    margin:0;
+    color:#b3b3b3;
+    font-size:14px;
+    text-align:left;
+}
+.play-icon{
+    width:35px;
+    text-align:center;
+    color:white;
+    font-size:18px;
+    opacity:0;
+    transition:opacity .2s ease,transform .2s ease;
+}
+.song-card:hover .play-icon{
+    opacity:1;
+}
+.song-card.playing .play-icon{
+    opacity:1;
+    transform:scale(1.1);
+}
+.song-card audio{
+    display:none;
+}
+@media (max-width:900px){
+    div.content{
+        flex-direction:column;
+        gap:30px;
+    }
+    div.biodata{
+        width:85%;
+    }
+    .playlist-header{
+        align-items:center;
+    }
+    .playlist-info h1{
+        font-size:32px;
+    }
+}
+@media (max-width:600px){
+    .makanan,.movies,.series{
+        flex-direction:column;
+    }
+    div.biodata{
+        width:90%;
+        padding:20px;
+    }
+    .spotify-playlist{
+        width:95%;
+        padding:15px;
+    }
+    .playlist-header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .playlist-cover{
+        width:180px;
+        height:180px;
+    }
+    .playlist-info{
+        align-items:center;
+    }
+    .playlist-info h1{
+        text-align:center;
+        font-size:28px;
+    }
+    .song-card{
+        gap:10px;
+    }
+    .song-number{
+        width:18px;
+    }
+    .song-card img{
+        width:50px;
+        height:50px;
+    }
+    .song-info h3{
+        font-size:14px;
+    }
+    .song-info p{
+        font-size:12px;
+    }
+}
